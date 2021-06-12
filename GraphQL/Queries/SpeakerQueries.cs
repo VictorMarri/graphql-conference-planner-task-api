@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GraphQL.Queries
 {
-    public class SpeakerQuery
+    public class SpeakerQueries
     {
         public IQueryable<Speaker> GetSpeakers([Service] ApplicationDbContext context)
             => context.Speakers;

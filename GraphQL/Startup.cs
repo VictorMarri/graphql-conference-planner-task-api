@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using GraphQL.Data.Context;
+using GraphQL.Mutations;
 using GraphQL.Queries;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -23,7 +24,8 @@ namespace GraphQL
                 => options.UseSqlite("Data Source=conferences.db"));
 
             services.AddGraphQLServer()
-                .AddQueryType<SpeakerQuery>();
+                .AddQueryType<SpeakerQueries>()
+                .AddMutationType<SpeakerMutations>();
 
         }
 
