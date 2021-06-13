@@ -13,6 +13,6 @@ namespace GraphQL.Data.Context
         {
         }
 
-        public DbSet<Speaker> Speakers { get; set; }
+        public DbSet<Speaker> Speakers { get; set; } = default!;
     }
 }
