@@ -1,6 +1,8 @@
 ﻿using GraphQL.Data;
 using GraphQL.Data.Context;
+using GraphQL.Extensions;
 using HotChocolate;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +12,10 @@ namespace GraphQL.Queries
 {
     public class SpeakerQueries
     {
-        public IQueryable<Speaker> GetSpeakers([Service] ApplicationDbContext context)
-            => context.Speakers;
+        [UseApplicationDbContext]
+        public Task<List<Speaker>> GetSpeakers([ScopedService] ApplicationDbContext context) // =>
+        {
+             return context.Speakers.ToListAsync();
+        }
     }
 }

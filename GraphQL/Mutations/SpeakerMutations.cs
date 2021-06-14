@@ -1,5 +1,6 @@
 ﻿using GraphQL.Data;
 using GraphQL.Data.Context;
+using GraphQL.Extensions;
 using GraphQL.Inputs;
 using GraphQL.Payloads;
 using HotChocolate;
@@ -12,7 +13,9 @@ namespace GraphQL.Mutations
 {
     public class SpeakerMutations
     {
-        public async Task<AddSpeakerPayload> AddSpeaker(AddSpeakerInput input, [Service] ApplicationDbContext context)
+        [UseApplicationDbContext]
+        public async Task<AddSpeakerPayload> AddSpeaker(AddSpeakerInput input, 
+            [ScopedService] ApplicationDbContext context)
         {
             var speaker = new Speaker
             {
