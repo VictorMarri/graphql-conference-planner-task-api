@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using GraphQL.Data.Context;
+using GraphQL.DataLoader;
 using GraphQL.Mutations;
 using GraphQL.Queries;
 using Microsoft.AspNetCore.Builder;
@@ -25,7 +26,8 @@ namespace GraphQL
 
             services.AddGraphQLServer()
                 .AddQueryType<SpeakerQueries>()
-                .AddMutationType<SpeakerMutations>();
+                .AddMutationType<SpeakerMutations>()
+                .AddDataLoader<SpeakerByIdDataLoader>();
 
         }
 
