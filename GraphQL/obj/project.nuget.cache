@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "KgBOEXvQC99T2Zhgm7EZK9jI/W52ld6hnlsU2S4P8+zlc5vuWQeuyhyuaG9n1l62AoycB0XTFHRvTbO1RteEwA==",
+  "dgSpecHash": "eeSxlA3f9r/t6UCgbwdTCwGOxac/dkYKL+v6qYBRx7TCE4U25dI0JOqmlzoL3E4lAl/LjesLSPtZc20ZoAXSzw==",
   "success": true,
   "projectFilePath": "C:\\Users\\victo\\source\\repos\\.Net\\ConferencePlanner\\GraphQL\\GraphQL.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\victo\\.nuget\\packages\\documentformat.openxml\\2.13.0\\documentformat.openxml.2.13.0.nupkg.sha512",
     "C:\\Users\\victo\\.nuget\\packages\\greendonut\\11.0.0\\greendonut.11.0.0.nupkg.sha512",
     "C:\\Users\\victo\\.nuget\\packages\\hotchocolate\\11.0.0\\hotchocolate.11.0.0.nupkg.sha512",
     "C:\\Users\\victo\\.nuget\\packages\\hotchocolate.abstractions\\11.0.0\\hotchocolate.abstractions.11.0.0.nupkg.sha512",
@@ -55,6 +56,7 @@
     "C:\\Users\\victo\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\victo\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\victo\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512",
+    "C:\\Users\\victo\\.nuget\\packages\\system.io.packaging\\4.7.0\\system.io.packaging.4.7.0.nupkg.sha512",
     "C:\\Users\\victo\\.nuget\\packages\\system.io.pipelines\\4.7.0\\system.io.pipelines.4.7.0.nupkg.sha512",
     "C:\\Users\\victo\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\victo\\.nuget\\packages\\system.text.json\\4.7.0\\system.text.json.4.7.0.nupkg.sha512",
