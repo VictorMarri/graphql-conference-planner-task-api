@@ -69,3 +69,5 @@ C:\Users\victo\source\repos\.Net\ConferencePlanner\GraphQL\bin\Debug\net5.0\HotC
 C:\Users\victo\source\repos\.Net\ConferencePlanner\GraphQL\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\victo\source\repos\.Net\ConferencePlanner\GraphQL\bin\Debug\net5.0\Microsoft.Extensions.DiagnosticAdapter.dll
 C:\Users\victo\source\repos\.Net\ConferencePlanner\GraphQL\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\victo\source\repos\.Net\ConferencePlanner\GraphQL\bin\Debug\net5.0\DocumentFormat.OpenXml.dll
+C:\Users\victo\source\repos\.Net\ConferencePlanner\GraphQL\bin\Debug\net5.0\System.IO.Packaging.dll
