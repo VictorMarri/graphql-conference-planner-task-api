@@ -4,6 +4,7 @@ using GraphQL.Extensions;
 using GraphQL.Inputs;
 using GraphQL.Payloads;
 using HotChocolate;
+using HotChocolate.Types;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,13 @@ using System.Threading.Tasks;
 
 namespace GraphQL.Mutations
 {
+    //public const string Mutation = "Mutation" -> Constantes
+    [ExtendObjectType(Name = "Mutation")]
     public class SpeakerMutations
     {
         [UseApplicationDbContext]
-        public async Task<AddSpeakerPayload> AddSpeaker(AddSpeakerInput input, 
+        public async Task<AddSpeakerPayload> AddSpeaker(
+            AddSpeakerInput input, 
             [ScopedService] ApplicationDbContext context)
         {
             var speaker = new Speaker

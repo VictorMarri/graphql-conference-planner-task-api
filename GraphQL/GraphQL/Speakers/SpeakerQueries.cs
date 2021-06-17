@@ -20,7 +20,10 @@ namespace GraphQL.Queries
              return context.Speakers.ToListAsync();
         }
 
-        public Task<Speaker> GetSpeakerAsync(int id, SpeakerByIdDataLoader dataLoader, CancellationToken cancellationToken)
+        public Task<Speaker> GetSpeakerAsync(
+            int id, 
+            SpeakerByIdDataLoader dataLoader, 
+            CancellationToken cancellationToken)
         {
             return dataLoader.LoadAsync(id, cancellationToken);
         }
