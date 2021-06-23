@@ -27,8 +27,10 @@ namespace GraphQL
 
             services.AddGraphQLServer()
                 .AddQueryType<SpeakerQueries>()
-                .AddMutationType<SpeakerMutations>()
+                .AddMutationType(d => d.Name("Mutation"))
+                    .AddTypeExtension<SpeakerMutations>()
                 .AddType<SpeakerType>()
+                .EnableRelaySupport()
                 .AddDataLoader<SpeakerByIdDataLoader>()
                 .AddDataLoader<SessionByIdDataLoader>();
 

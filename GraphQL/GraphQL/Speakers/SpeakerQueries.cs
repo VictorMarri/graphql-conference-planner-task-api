@@ -3,6 +3,7 @@ using GraphQL.Data.Context;
 using GraphQL.DataLoader;
 using GraphQL.Extensions;
 using HotChocolate;
+using HotChocolate.Types.Relay;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,7 @@ namespace GraphQL.Queries
         }
 
         public Task<Speaker> GetSpeakerAsync(
-            int id, 
+            [ID(nameof(Speaker))]int id, 
             SpeakerByIdDataLoader dataLoader, 
             CancellationToken cancellationToken)
         {
