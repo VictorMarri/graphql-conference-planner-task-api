@@ -1,8 +1,10 @@
-﻿using GraphQL.Data;
+﻿using GraphQL.Constantes;
+using GraphQL.Data;
 using GraphQL.Data.Context;
 using GraphQL.DataLoader;
 using GraphQL.Extensions;
 using HotChocolate;
+using HotChocolate.Types;
 using HotChocolate.Types.Relay;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -13,6 +15,7 @@ using System.Threading.Tasks;
 
 namespace GraphQL.Queries
 {
+    [ExtendObjectType(GraphQlConstantes.Query_Type)]
     public class SpeakerQueries
     {
         [UseApplicationDbContext]

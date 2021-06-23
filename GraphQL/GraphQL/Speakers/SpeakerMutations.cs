@@ -1,4 +1,5 @@
-﻿using GraphQL.Data;
+﻿using GraphQL.Constantes;
+using GraphQL.Data;
 using GraphQL.Data.Context;
 using GraphQL.Extensions;
 using GraphQL.Inputs;
@@ -13,7 +14,7 @@ using System.Threading.Tasks;
 namespace GraphQL.Mutations
 {
     //public const string Mutation = "Mutation" -> Constantes
-    [ExtendObjectType(Name = "Mutation")]
+    [ExtendObjectType(GraphQlConstantes.Mutation_Type)]
     public class SpeakerMutations
     {
         [UseApplicationDbContext]
