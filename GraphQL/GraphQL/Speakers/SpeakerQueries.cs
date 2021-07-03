@@ -25,7 +25,7 @@ namespace GraphQL.Queries
         }
 
         public Task<Speaker> GetSpeakerAsync(
-            [ID(nameof(Speaker))]int id, 
+            [ID(nameof(Speaker))]int id, //Descrevendo pra engine de execução que esse aqui vai ser o ID 'Oficial' da entidade
             SpeakerByIdDataLoader dataLoader, 
             CancellationToken cancellationToken)
         {
