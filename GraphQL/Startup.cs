@@ -30,6 +30,9 @@ namespace GraphQL
                 .AddMutationType(d => d.Name("Mutation"))
                     .AddTypeExtension<SpeakerMutations>()
                 .AddType<SpeakerType>()
+                .AddType<SessionType>()
+                .AddType<AttendeeType>()
+                .AddType<TrackType>()
                 .EnableRelaySupport()
                 .AddDataLoader<SpeakerByIdDataLoader>()
                 .AddDataLoader<SessionByIdDataLoader>();
