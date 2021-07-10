@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using GraphQL.Data.Context;
 using GraphQL.DataLoader;
+using GraphQL.GraphQL.Sessions;
 using GraphQL.Mutations;
 using GraphQL.Queries;
 using GraphQL.Types;
@@ -29,6 +30,7 @@ namespace GraphQL
                 .AddQueryType<SpeakerQueries>()
                 .AddMutationType(d => d.Name("Mutation"))
                     .AddTypeExtension<SpeakerMutations>()
+                    .AddTypeExtension<SessionMutations>()
                 .AddType<SpeakerType>()
                 .AddType<SessionType>()
                 .AddType<AttendeeType>()
