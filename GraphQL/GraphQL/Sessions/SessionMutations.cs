@@ -49,5 +49,32 @@ namespace GraphQL.GraphQL.Sessions
 
             return new AddSessionPayload(session);
         }
+
+        [UseApplicationDbContext]
+        public async Task<ScheduleSessionPayload> ScheduleSessionAsync(ScheduleSessionInput input, [ScopedService] ApplicationDbContext dbContext)
+        {
+            if (input.EndTime < input.StartTime)
+            {
+                return new ScheduleSessionPayload(
+                    new UserError("Data fim deve ser maior que a data inicial", "DATA_FINAL_INVALIDA"));
+            }
+
+            Session session = await dbContext.Sessions.FindAsync(input.SessionId);
+            int? initialTrackId = session.TrackId;
+
+            if (session is null)
+            {
+                return new ScheduleSessionPayload(
+                      new UserError("Sessão não encontrada.", "SESSAO_NAO_ENCONTRADA"));
+            }
+
+            session.TrackId = input.TrackId;
+            session.StartTime = input.StartTime;
+            session.EndTime = input.EndTime;
+
+            await dbContext.SaveChangesAsync();
+
+            return new ScheduleSessionPayload(session);
+        }
     }
 }
